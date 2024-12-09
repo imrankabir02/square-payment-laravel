@@ -9,6 +9,9 @@ class Payment extends Model
 {
     use HasFactory;
 
+    const ALLOWED_CURRENCIES = ['USD'];
+    const ALLOWED_STATUSES = ['pending', 'completed', 'failed'];
+
     protected $fillable = [
         'order_id',
         'payment_id',
